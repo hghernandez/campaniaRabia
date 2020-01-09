@@ -39,8 +39,10 @@ mapTematico <- leaflet(mapSM) %>%
   addPolygons() %>%
   addCircles(dat$long,dat$lat, radius= ~ (dat$`8_Total_de_perros_va`), color= "red", fill = TRUE, fillColor = "red", label= "Proporcion de cantidad de perros en la vivienda")
  
+#Guardo el archivo con extension .html
+library(htmlwidgets)
 
-
+saveWidget(mapTematico , "campaniaRabia.html", selfcontained = FALSE)
 
 
 
