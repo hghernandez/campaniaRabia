@@ -33,10 +33,13 @@ mapSM <- getbb("salvador mazza, Salta",  format_out = "sf_polygon")
 
 radius <- names(dat[,c(14)])
 
-mapaTematico <- leaflet(mapSM) %>%
+leaflet(mapSM) %>%
   addTiles() %>% 
   addPolygons() %>%
-  addCircles(dat$long,dat$lat, radius= ~ (dat$`8_Total_de_perros_va`), fillColor = "blue")
+  addCircles(dat$long,dat$lat, radius= ~ (dat$`8_Total_de_perros_va`), color= "red", fill = TRUE, fillColor = "red")
+ 
+
+
 
 
 
