@@ -32,7 +32,7 @@ library(mapview)
 
 mapSM <- getbb("salvador mazza, Salta",  format_out = "sf_polygon")
 
-radius <- names(dat[,c(14)])
+
 
 mapTematico <- leaflet(mapSM) %>%
   addTiles() %>% 
@@ -42,7 +42,7 @@ mapTematico <- leaflet(mapSM) %>%
 #Guardo el archivo con extension .html
 library(htmlwidgets)
 
-saveWidget(mapTematico , "campaniaRabia.html", selfcontained = FALSE)
+saveWidget(mapTematico , "C:/Users/Gabriela/Desktop/campaniaRabia.html", selfcontained = TRUE)
 
 
 
